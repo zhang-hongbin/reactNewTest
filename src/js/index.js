@@ -1,7 +1,22 @@
-var React = require('react')
-var ReactDOM = require('react-dom')
+import React from 'react'
+import {render} from "react-dom"
+import Header from"./components/header"
+import BodyIndex from "./components/bodyindex"
+import Footer from "./components/footer.js"
 
-ReactDOM.render(
-    <h1>Hello World 1111122</h1>,
+class Index extends React.Component {
+    render() {
+        return (
+            <div>
+                <Header />
+                <BodyIndex username="通过props传递的Name" userid={123} />
+                <Footer />
+            </div>
+        )
+    }  
+}
+
+render(
+    <Index />,
     document.getElementById("example")
 );
